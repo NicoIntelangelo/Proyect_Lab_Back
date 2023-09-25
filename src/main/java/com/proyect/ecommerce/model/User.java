@@ -1,4 +1,4 @@
-package com.ecommerce.ecommerce.model;
+package com.proyect.ecommerce.model;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -26,7 +26,7 @@ public class User implements UserDetails{
     private UserRole UserRole;
 
     ////////////////////////
-    public User(long id, String name, String username, String email, String password, com.ecommerce.ecommerce.model.UserRole userRole) {
+    public User(long id, String name, String username, String email, String password, com.proyect.ecommerce.model.UserRole userRole) {
         this.id = id;
         this.name = name;
         this.username = username;

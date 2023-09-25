@@ -1,4 +1,4 @@
-package com.ecommerce.ecommerce.model;
+package com.proyect.ecommerce.model;
 
 import jakarta.persistence.*;
 
@@ -15,6 +15,7 @@ public class Sale {
     private Integer id;
     private Date date;
     private User user;
-    private Set<Product> productos = new HashSet<>();
+    
+    // private Set<Product> productos = new HashSet<>();
 
 }
