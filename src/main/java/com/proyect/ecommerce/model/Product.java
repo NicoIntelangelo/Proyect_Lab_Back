@@ -1,17 +1,15 @@
 package com.proyect.ecommerce.model;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.*;
 
 import java.util.List;
-
+@Entity
+@Table(name = "products")
 public class Product {
     @Id
-    @SequenceGenerator(name = "product_sequence", sequenceName = "product_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_sequence")
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
+    private Integer id;
     private String brand;
     private String productName;
     private String category;
@@ -21,7 +19,7 @@ public class Product {
     private String image;
     private boolean newArticle;
 
-    public Product(long id, String brand, String productName, String category, List<String> talles, double price, int discount, String image, boolean newArticle) {
+    public Product(Integer id, String brand, String productName, String category, List<String> talles, double price, int discount, String image, boolean newArticle) {
         this.id = id;
         this.brand = brand;
         this.productName = productName;
@@ -37,7 +35,7 @@ public class Product {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

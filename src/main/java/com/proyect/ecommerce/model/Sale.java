@@ -1,11 +1,10 @@
 package com.proyect.ecommerce.model;
 
-import jakarta.persistence.*;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "sales")
@@ -14,7 +13,7 @@ public class Sale {
     @Id
     private Integer id;
     private Date date;
-    private User user;
+    //private AppUser user;
     
     // private Set<Product> productos = new HashSet<>();
 
