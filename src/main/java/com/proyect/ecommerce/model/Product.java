@@ -31,7 +31,7 @@ public class Product {
         this.newArticle = newArticle;
     }
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
