@@ -8,20 +8,21 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/products")
 public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Product>> findAll() { return ResponseEntity.ok(productService.findAllProduct()); }
 
     // Devuelve una lista de productos que son newArticle
-    @GetMapping
+    @GetMapping("/new")
     public ResponseEntity<List<Product>> findNews() { return ResponseEntity.ok(productService.findNewArticles(true)); }
 
-    @GetMapping("/{id}")
+    @GetMapping("/detail/{id}")
     public ResponseEntity<Product> findById(@PathVariable Integer id) {
         Product product = productService.find(id).orElse(null);
 
@@ -30,8 +31,8 @@ public class ProductController {
 
     // Devuelve una lista de productos según la categoría que le llega por el path
     @GetMapping("/{category}")
-    public List<Product> findByCategory(@PathVariable String category) {
-        return productService.findByC(category);
+    public ResponseEntity<List<Product>> findByCategory(@PathVariable String category) {
+        return ResponseEntity.ok(productService.findByC(category));
     }
 
     @PutMapping()

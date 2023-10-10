@@ -1,8 +1,6 @@
 package com.proyect.ecommerce.model;
 
 import jakarta.persistence.*;
-
-import java.util.List;
 @Entity
 @Table(name = "products")
 public class Product {
@@ -13,14 +11,17 @@ public class Product {
     private String brand;
     private String productName;
     private String category;
-    private List<String> talles;
+    private boolean talles;
     private double price;
     private  int discount;
     private String image;
     private boolean newArticle;
 
-    public Product(Integer id, String brand, String productName, String category, List<String> talles, double price, int discount, String image, boolean newArticle) {
-        this.id = id;
+
+    public Product() {
+    }
+
+    public Product(String brand, String productName, String category, boolean talles, double price, int discount, String image, boolean newArticle) {
         this.brand = brand;
         this.productName = productName;
         this.category = category;
@@ -63,11 +64,11 @@ public class Product {
         this.category = category;
     }
 
-    public List<String> getTalles() {
+    public boolean getTalles() {
         return talles;
     }
 
-    public void setTalles(List<String> talles) {
+    public void setTalles(boolean talles) {
         this.talles = talles;
     }
 
