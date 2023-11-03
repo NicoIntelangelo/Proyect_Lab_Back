@@ -11,7 +11,7 @@ public class Product {
     private String brand;
     private String productName;
     private String category;
-    private boolean talles;
+    private String talles;
     private double price;
     private  int discount;
     private String image;
@@ -21,7 +21,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(String brand, String productName, String category, boolean talles, double price, int discount, String image, boolean newArticle) {
+    public Product(String brand, String productName, String category, String talles, double price, int discount, String image, boolean newArticle) {
         this.brand = brand;
         this.productName = productName;
         this.category = category;
@@ -64,11 +64,11 @@ public class Product {
         this.category = category;
     }
 
-    public boolean getTalles() {
+    public String getTalles() {
         return talles;
     }
 
-    public void setTalles(boolean talles) {
+    public void setTalles(String talles) {
         this.talles = talles;
     }
 

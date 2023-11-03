@@ -24,15 +24,15 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
         userRepository.save(new AppUser( "diego", "diego","diego@digital.com","password"));
-        productRepository.save(new Product("Nike","Air Max","zapatillas",true,120.3,10,"image",true));
-        productRepository.save(new Product("Nike","Jordan 1","zapatillas",true,16600.3,15,"image",false));
-        productRepository.save(new Product("Adidas","Run","remeras",true,13220.3,0,"image",false));
-        productRepository.save(new Product("Nike","Basquet","remeras",true,12220.3,20,"image",false));
-        productRepository.save(new Product("Fila","concept","buzos",true,60020.3,15,"image",true));
-        productRepository.save(new Product("Nike","Jordan","buzos",true,12110.3,5,"image",false));
-        productRepository.save(new Product("Adidas","Harden","remeras",true,12220.3,8,"image",true));
-        productRepository.save(new Product("Adidas","Runing","zapatillas",true,18220.3,8,"image",true));
-        productRepository.save(new Product("Adidas","Harden","remeras",true,12220.3,0,"image",true));
-        productRepository.save(new Product("Adidas","Runing","zapatillas",true,18220.3,0,"image",true));
+        productRepository.save(new Product("Nike","Air Max","zapatillas","",120.3,10,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",true));
+        productRepository.save(new Product("Nike","Jordan 1","zapatillas","",16600.3,15,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",false));
+        productRepository.save(new Product("Adidas","Run","remeras","",13220.3,0,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",false));
+        productRepository.save(new Product("Nike","Basquet","remeras","",12220.3,20,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",false));
+        productRepository.save(new Product("Fila","concept","buzos","",60020.3,15,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",true));
+        productRepository.save(new Product("Nike","Jordan","buzos","",12110.3,5,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",false));
+        productRepository.save(new Product("Adidas","Harden","remeras","",12220.3,8,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",true));
+        productRepository.save(new Product("Adidas","Runing","zapatillas","",18220.3,8,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",true));
+        productRepository.save(new Product("Adidas","Harden","remeras","",12220.3,0,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",true));
+        productRepository.save(new Product("Adidas","Runing","zapatillas","",18220.3,0,"https://acdn.mitiendanube.com/stores/219/431/products/0e082e5e-89b7-42b1-8345-f5ed47cda4f1-9e3142af1b2532f74916990234852226-480-0.webp",true));
     }
 }
